@@ -32,17 +32,17 @@ st.divider()
 col1,col2,col3 =st.columns(3)
 
 with col1:
-    st.header("Pie Chart of Species")
+    st.header("Scatter plot of Sepal Length vs Sepal Width")
     fig_pie = px.scatter(data, x = "sepal_length",y = "sepal_width", title = "Species of Flower")
     st.plotly_chart(fig_pie, use_container_width=True)
     
 
 with col2:
-    st.header("Pie Chart of Species")
+    st.header("Bubble chart")
     fig = px.scatter_3d(data, x='sepal_length', y='sepal_width', z='petal_width',color='species')
     st.plotly_chart(fig, use_container_width=True)
 with col3:
-    st.header("Pie Chart of Species")
+    st.header("Scatter plot")
     fig_pie = px.scatter(data, x = "petal_length",y = "petal_length", title = "Species of Flower")
     st.plotly_chart(fig_pie, use_container_width=True)
 st.divider()
